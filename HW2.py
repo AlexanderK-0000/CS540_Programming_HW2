@@ -12,7 +12,7 @@ class Scheduler:
         self.process_dict[a.pid] = (a, None) # a is the process, None will be its lottery number after roll_lottery
         
     def roll_lottery(self): #assings all scheduled processes a random lottery number
-        taken_values = [] #holds already addinged number to prevent duplicates
+        taken_values = [] #holds already assinged numbers to prevent duplicates
         for process, lottery in self.process_dict.values():
             while True:
                 num = random.randrange(0, 1000) #random number 0-999
